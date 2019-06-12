@@ -1,11 +1,3 @@
-#Setps to run project
-
-1.npm install /
-2.json-server install -g /
-3.go to inside the assets path and run (json-server --watch user.json) it gives you localhost:3000 it is json server. /
-4.ng serve
-
-
 # AngularCrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
