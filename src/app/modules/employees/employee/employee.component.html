@@ -1,0 +1,99 @@
+<div class="emp-form">
+  <h5><i class="fa fa-user-plus" aria-hidden="true"></i> New User</h5>
+  <form #myForm="ngForm">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input placeholder="Firts Name" id="firstName" name="firstName" class="form-control" [(ngModel)]="employeeService.currentEmployee.firstName"
+          required #firstName="ngModel">
+      </div>
+      <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+
+        <div *ngIf="firstName.errors.required">
+          Name is required.
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input type="email" placeholder="Employee Email" id="email" name="email" class="form-control" [(ngModel)]="employeeService.currentEmployee.email"
+          required #email="ngModel">
+      </div>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+
+        <div *ngIf="email.errors.required">
+          Email is required.
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <input tye="text" placeholder="Address" id="address" name="address" class="form-control" [(ngModel)]="employeeService.currentEmployee.address"
+          required #address="ngModel">
+      </div>
+      <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+
+        <div *ngIf="address.errors.required">
+          Address is required.
+        </div>
+
+      </div>
+      <div class="col-md-12 form-group">
+        <input type="number" placeholder="Contact Number" id="contactNumber" name="contactNumber" class="form-control" [(ngModel)]="employeeService.currentEmployee.contactNumber"
+          required #contactNumber="ngModel">
+      </div>
+      <div *ngIf="contactNumber.invalid && (contactNumber.dirty || contactNumber.touched)" class="alert alert-danger">
+
+        <div *ngIf="contactNumber.errors.required">
+          Contact Number is required.
+        </div>
+
+      </div>
+      <div class="col-md-12 form-group">
+        <input type="text" placeholder="Enter Url" id="url" name="url" class="form-control" [(ngModel)]="employeeService.currentEmployee.url"
+          required #url="ngModel">
+      </div>
+      <div *ngIf="url.invalid && (url.dirty || url.touched)" class="alert alert-danger">
+
+        <div *ngIf="url.errors.required">
+          url is required.
+        </div>
+
+      </div>
+      <div class="col-md-12 form-group">
+        <select class="form-control" id="country" name="country" [(ngModel)]="employeeService.currentEmployee.country" required #country="ngModel">
+          <option value="">Choose County</option>
+          <option *ngFor="let country of countrys" [value]="country">{{country}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <input type="date" placeholder="Enter DOB" id="dob" name="dob" class="form-control" [(ngModel)]="employeeService.currentEmployee.dob"
+          required #dob="ngModel">
+      </div>
+      <div *ngIf="dob.invalid && (dob.dirty || dob.touched)" class="alert alert-danger">
+
+        <div *ngIf="dob.errors.required">
+          DOB is required.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-6">
+        <button class="btn btn-success btn-md  btn-block" (click)="createEmployee(employeeService.currentEmployee)" [disabled]="!myForm.form.valid">
+          <i class="fa fa-save"></i>
+          SAVE
+        </button>
+      </div>
+      <div class="col-md-6 col-sm-6">
+        <button class="btn btn-primary btn-md btn-block" (click)="clearEmployee(employeeService.currentEmployee)">
+          <i class="fa fa-retweet"></i>
+          CLEAR
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

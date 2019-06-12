@@ -1,0 +1,44 @@
+{
+  "Employee": [
+    {
+      "id": 1,
+      "firstName": "niraj123",
+      "email": "niraj@gmail.com",
+      "address": "hyderabad",
+      "contactNumber": 8763624037,
+      "url": "www.google.com",
+      "country": "India",
+      "dob": "10/03/1994"
+    },
+    {
+      "id": 2,
+      "firstName": "panakaj",
+      "email": "pankaj@gmail.com",
+      "address": "mumbai",
+      "contactNumber": 9845781256,
+      "url": "www.google.com",
+      "country": "UK",
+      "dob": "10/03/1993"
+    },
+    {
+      "id": 3,
+      "firstName": "Ravi",
+      "email": "ravi@gmail.com",
+      "address": "delhi",
+      "contactNumber": 9845781256,
+      "url": "www.google.com",
+      "country": "USA",
+      "dob": "10/03/1995"
+    },
+    {
+      "id": 4,
+      "firstName": "nikhil",
+      "email": "nikhil@123.com",
+      "address": "pune",
+      "contactNumber": "87685858",
+      "url": "www.link.com",
+      "country": "country",
+      "dob": "2019-06-15"
+    }
+  ]
+}

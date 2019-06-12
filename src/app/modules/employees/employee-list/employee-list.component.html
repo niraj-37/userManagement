@@ -1,0 +1,39 @@
+<div class="">
+  <table class="table table-hover table-responsive">
+    <thead>
+      <tr>
+
+        <th>FirstName</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>ContactNumber</th>
+        <th>Url</th>
+        <th>Country</th>
+        <th>DOB</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employeeService.allEmployee">
+        <td>{{emp.firstName}}</td>
+        <td>{{emp.email}}</td>
+        <td>{{emp.address}}</td>
+        <td>{{emp.contactNumber}}</td>
+        <td>{{emp.url}}</td>
+        <td>{{emp.country}}</td>
+        <td>{{emp.dob}}</td>
+        <td>
+          <a class="btn text-danger" (click)="deleteEmployee(emp.id)">
+            <i class="fa fa-trash"></i>
+          </a>
+        </td>
+        <td>
+          <a class="btn" (click)="editEmployee(emp)">
+            <i class="fa fa-edit"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,7 @@
+.header h3{
+    text-align: center;
+    color:#fff;
+    background-image: linear-gradient(to right, #83c444, #21475f) !important;
+    
+    padding: 20px;  
+}
