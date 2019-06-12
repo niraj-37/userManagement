@@ -1,6 +1,19 @@
+#Steps to run project:
+----------------------
+1st step : npm install
+2nd step : json-server install -g 
+3rd step : got to path cd src ,cd assets inside asset file just run this command to host the json :- json-server --watch user.json
+4th step : ng serve
+
+ 
+
+
 # AngularCrud
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+
+
 
 ## Development server
 
